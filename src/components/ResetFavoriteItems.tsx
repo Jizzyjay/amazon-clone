@@ -11,6 +11,7 @@ const ResetFavoriteItems = () => {
       dispatch(resetFavoriteData());
     }
   };
+  
   return (
     <button
       onClick={handleResetCart}

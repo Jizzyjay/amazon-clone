@@ -15,6 +15,7 @@ interface Item {
   title: string;
   quantity: number;
 }
+
 interface cartProductProps {
   item: Item;
 }

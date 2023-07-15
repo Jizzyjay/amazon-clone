@@ -14,7 +14,7 @@ const FavoritePage = () => {
         <div className="bg-white p-4 rounded-lg">
           <div className="flex items-center justify-between border-b-[1px] border-b-gray-400 pb-1">
             <p className="text-2xl font-semibold text-amazon_blue">
-              Favorte Items
+              Favorite Items
             </p>
             <p className="text-lg font-semibold text-amazon_blue">Action</p>
           </div>
@@ -32,7 +32,7 @@ const FavoritePage = () => {
           <h1>Nothing is available in the Favorite list</h1>
           <Link href="/">
             <button className="w-52 h-10 bg-amazon_blue text-white rounded-lg text-sm font-semibold hover:bg-amazon_yellow hover:text-black duration-300 mt-2">
-              go to shopping
+              Go to shopping
             </button>
           </Link>
         </div>

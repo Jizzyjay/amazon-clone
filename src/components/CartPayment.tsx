@@ -19,7 +19,6 @@ const CartPayment = () => {
     });
     setTotalAmount(amt);
   }, [productData]);
-  // Striep payment
   const stripePromise = loadStripe(
     process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!
   );
@@ -36,8 +35,6 @@ const CartPayment = () => {
       body: JSON.stringify({ items: productData, email: session?.user?.email }),
     });
     const checkoutSession = await response.json();
-
-    // Redirecting user/customer to Stripe Checkout
     const result: any = await stripe?.redirectToCheckout({
       sessionId: checkoutSession.id,
     });
@@ -45,6 +42,7 @@ const CartPayment = () => {
       alert(result?.error.message);
     }
   };
+
   return (
     <div className="flex flex-col gap-4">
       <div className="flex gap-2">
@@ -52,7 +50,7 @@ const CartPayment = () => {
           <SiMediamarkt />
         </span>
         <p className="text-sm">
-          Your order qualifies for FREE Shipping by Choosing this option at
+          Your order is eligible for FREE Delivery. Select this option option at
           checkout. See details....
         </p>
       </div>

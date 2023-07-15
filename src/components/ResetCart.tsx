@@ -11,6 +11,7 @@ const ResetCart = () => {
       dispatch(resetCart());
     }
   };
+  
   return (
     <button
       onClick={handleResetCart}

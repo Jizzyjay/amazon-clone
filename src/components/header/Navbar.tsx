@@ -51,7 +51,6 @@ const Navbar = () => {
   return (
     <div className="w-full h-20 bg-amazon_blue text-lightText sticky top-0 z-50">
       <div className="h-full w-full mx-auto inline-flex items-center justify-between gap-1 mdl:gap-3 px-4">
-        {/* logo */}
         <Link
           href={"/"}
           className="px-2 border border-transparent hover:border-white cursor-pointer duration-300 flex items-center justify-center h-[70%]"
@@ -110,8 +109,7 @@ const Navbar = () => {
               ) : (
                 <div className="bg-gray-50 flex items-center justify-center py-10 rounded-lg shadow-lg">
                   <p className="text-xl font-semibold animate-bounce">
-                    Nothing is matches with your search keywords. Please try
-                    again!
+                    No products found
                   </p>
                 </div>
               )}
@@ -157,7 +155,7 @@ const Navbar = () => {
             </span>
           )}
         </Link>
-        {/* cart */}
+
         <Link
           href={"/cart"}
           className="flex items-center px-2 border border-transparent hover:border-white cursor-pointer duration-300 h-[70%] relative"

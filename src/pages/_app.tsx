@@ -11,6 +11,7 @@ export default function App({
   Component,
   pageProps: { session, ...pageProps },
 }: AppProps) {
+  
   return (
     <Provider store={store}>
       <PersistGate persistor={persistor} loading={null}>

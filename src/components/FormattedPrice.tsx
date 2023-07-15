@@ -8,6 +8,7 @@ const FormattedPrice = ({ amount }: Props) => {
     currency: "USD",
     minimumFractionDigits: 2,
   });
+  
   return <span>{formattedAmount}</span>;
 };
 

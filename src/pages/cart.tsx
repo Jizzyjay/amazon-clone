@@ -5,11 +5,14 @@ import CartProduct from "@/components/CartProduct";
 import ResetCart from "@/components/ResetCart";
 import Link from "next/link";
 import CartPayment from "@/components/CartPayment";
+import Image from "next/image";
+import emptyCart from '../images/empty-cart.png'
 
 const CartPage = () => {
   const { productData } = useSelector((state: StateProps) => state.next);
+  
   return (
-    <div className="max-w-screen-2xl mx-auto px-6 grid grid-cols-5 gap-10 py-4">
+    <div className="max-w-screen-2xl mx-auto px-6 grid grid-cols-5 gap-10 py-20">
       {productData.length > 0 ? (
         <>
           <div className="bg-white col-span-4 p-4 rounded-lg">
@@ -34,10 +37,15 @@ const CartPage = () => {
         </>
       ) : (
         <div className="bg-white h-64 col-span-5 flex flex-col items-center justify-center py-5 rounded-lg shadow-lg">
-          <h1 className="text-lg font-medium">Your cart is empty!</h1>
+          <Image
+            src={emptyCart}
+            alt="empty-cart"
+            width={250}
+            height={250}
+          />
           <Link href={"/"}>
             <button className="w-52 h-10 bg-amazon_blue text-white rounded-lg text-sm font-semibold hover:bg-amazon_yellow hover:text-black">
-              go to shopping
+              Go to shopping
             </button>
           </Link>
         </div>
