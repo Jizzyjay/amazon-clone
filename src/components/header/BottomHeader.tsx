@@ -3,6 +3,7 @@ import { StateProps } from "../../../type";
 import { signOut } from "next-auth/react";
 import { useSelector, useDispatch } from "react-redux";
 import { removeUser } from "@/store/nextSlice";
+import Link from "next/link";
 
 const BottomHeader = () => {
   const dispatch = useDispatch();
@@ -20,9 +21,11 @@ const BottomHeader = () => {
       <p className="hidden md:inline-flex items-center h-8 px-2 border border-transparent hover:border-white cursor-pointer duration-300">
         Todays Deals
       </p>
+      <Link href="/customerCare">
       <p className="hidden md:inline-flex items-center h-8 px-2 border border-transparent hover:border-white cursor-pointer duration-300">
         Customer Service
       </p>
+      </Link>
       <p className="hidden md:inline-flex items-center h-8 px-2 border border-transparent hover:border-white cursor-pointer duration-300">
         Registry
       </p>
